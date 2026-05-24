@@ -82,7 +82,7 @@ in request time when fetching only the first few 400 pages. It's pretty bad!
 
 ##### Example cURL
 > ```javascript
->  curl -X GET http://127.0.0.1:3000/api/ip?dateStart=2018-11-28T18:25:32
+>  curl -X GET http://127.0.0.1:3000/api/ip?country=CA&dateStart=2026-05-01T00:00:00&dateEnd=2026-05-31T00:00:00
 > ```
 </details>
 
@@ -147,21 +147,34 @@ You **must** have Node.js, Mocha, and Sqlite3 installed on your system
 
 ### Installation 
 Clone the repository to your local machine:
-```
+```bash
 refaat@xubuntu:~$ git clone https://github.com/Refaat0/notblind
 ```
 
 Install dependancies:
-```
+```bash
 refaat@xubuntu:~/notblind/server$ npm install
 ```
 
-Run the tests:
+Create a .env file:
+```bash
+  nano ./server/.env
+  HOST=http://127.0.0.1:
+  PORT=3000
 ```
+
+Create & populate a Sqlite database
+```bash
+  sqlite3 ./server/src/database/development.db < ./server/src/database/migrations/01-create-database.sql
+  sqlite3 ./server/src/database/development.db < ./server/src/database/migrations/01-insert-dumb-data.sql
+```
+
+Run the tests:
+```bash
 refaat@xubuntu:~/notblind/server$ npm test
 ```
 
 Run the program:
-```
+```nano
 refaat@xubuntu:~/notblind/server$ node ./index.js
 ```
