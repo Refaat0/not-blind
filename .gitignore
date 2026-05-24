@@ -1,0 +1,6 @@
+todo.md
+server/node_modules
+.env
+/server/src/database/development.db
+/server/src/database/production.db
+/server/src/database/testing.db

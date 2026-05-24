@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": ":3c",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/test"
+  },
+  "keywords": [],
+  "author": "Refaat",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "joi": "^18.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^11.7.5"
+  }
+}
