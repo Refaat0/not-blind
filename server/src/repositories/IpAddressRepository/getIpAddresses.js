@@ -2,7 +2,7 @@
 import database from "../../database/database.js";
 import QueryBuilder from "../../utilities/QueryBuilder.js";
 
-export default function getIpAddresses(filters) {
+export default  function getIpAddresses(filters) {
     try {
         // deconstruction
         const { ipAddress, country, dateStart, dateEnd, order, direction, page, limit } = filters;
